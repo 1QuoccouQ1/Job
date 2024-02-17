@@ -1,0 +1,129 @@
+.section {
+    width: 100%;
+    height: auto;
+}
+
+.section-panel {
+    text-align: center;
+    margin: 50px 0;
+}
+.section-box {
+    display: flex;
+    width: 100%;
+}
+.box-left {
+    width: 50%;
+    overflow: hidden;
+    margin:  10px;
+    border-radius: 30px;
+}
+.box-left a img {
+    width: 100%;
+    border-radius: 30px;
+    transition: all .3s ease-in;
+    overflow: hidden;
+
+
+}
+.box-left a img:hover {
+    border-radius: 0px;
+    transform: scale(1.2);
+}
+.box-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.box-right-top {
+    display: flex;
+    width: 100%;
+
+}
+.box-right-bottom {
+    display: flex;
+    width: 100%;
+
+
+}
+.box-right-top-list {
+    margin:  10px;
+    overflow: hidden;
+    width: 50%;
+}
+.box-right-top-list a img {
+    width: 98%;
+    transition: all .5s ease-in;
+    border-radius: 30px;
+
+}
+.box-right-top-list a img:hover {
+    border-radius: 0px;
+    transform: scale(1.2);
+}
+
+/*  */
+
+.list-panel-sliders {
+    position: relative;
+    color: white;
+}
+
+.list-panel-slider {
+    position: absolute;
+    right: 25%;
+    top: 100px;
+    z-index: 20;
+    width: 50%;
+    text-align: center;
+}
+.chosse-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.chosse-list li:first-child {
+    color: black;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: #fabb0f;
+}
+.chosse-list li:hover {
+    color: black;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: #fabb0f;
+}
+
+.chosse-list li {
+    padding: 5px 20px;
+    border-radius: 30px;
+    transition: all 0.5s ease-in;
+}
+
+.relative {
+    position: relative;
+}
+
+.buy {
+    position: absolute;
+    z-index: 100;
+    bottom: 70px;
+    right: 43%;
+    padding: 5px 22px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 25px;
+    transition: all 0.5s ease-in;
+    font-weight: 500;
+    cursor: pointer;
+}
+.buy:hover {
+    background-color: #fabb0f;
+}

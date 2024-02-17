@@ -1,0 +1,29 @@
+{
+    "user":[
+        {
+            "ho_ten": "Nguyen Van A",
+            "nam_sinh": 1990,
+            "dia_chi": "123 Đường ABC, Quận XYZ, Thành phố HCM"
+          },
+        {
+            "ho_ten": "Nguyen Van B",
+            "nam_sinh": 1920,
+            "dia_chi": "123 Đường ABC, Quận XYZ, Thành phố HCM"
+        }
+    ],
+    "danh_sach_san_pham": [
+      {
+        "ten_san_pham": "Điện thoại di động",
+        "gia": 5000000,
+        "ma_sp": "DT001"
+      },
+      {
+        "ten_san_pham": "Laptop",
+        "gia": 15000000,
+        "ma_sp": "LT002"
+      }
+    ],
+    "tong_tien": 20000000,
+    "ghi_chu": "Đơn hàng này cần giao hàng nhanh"
+  }
+  
