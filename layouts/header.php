@@ -57,8 +57,11 @@
             <div class="header-button" id="userDropdown">
 
                 <span class="relative z-20">
-                        <i class="fa-solid fa-cart-shopping header-icon cursor-pointer" id="cartIcon"></i>
-                    <div class="fixed   right-0 top-0 left-0 bottom-0  cart hidden " style="background-color: rgba(0,0,0,.25);" id="cartDiv">
+                <a class="hover:text-white" href="./index.php?action=cart">
+                    <i class="fa-solid fa-cart-shopping header-icon cursor-pointer" id="cartIcon"></i>
+                </a>
+                       
+                    <!-- <div class="fixed   right-0 top-0 left-0 bottom-0  cart hidden " style="background-color: rgba(0,0,0,.25);" id="cartDiv">
                         <div class="absolute right-0 top-0 h-full w-96 bg-white z-20 px-8 py-6">
                             <div class="flex justify-end">
                                 <div class="mb-4">
@@ -69,24 +72,27 @@
 
                                 </div>
                             </div>
-                            <div class="h-24 flex">
-                                <div class="w-2/5 p-2">
-                                    <img class="w-20 h-full"
-                                        src="https://beecube.vn/wp-content/uploads/2023/12/sp_x2-max-gen-3.jpg" alt="">
-                                </div>
-                                <div class="py-2 px-2">
-                                    <h3 class="font-medium ">Máy chiếu mini - Beecube X2 Max Gen 3</h3>
-                                    <div class="flex mt-3 justify-between">
-                                        <p>1 × 2.990.000 ₫</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                        </svg>
+                            <div id="cartItems">
+                                <div class="h-24 flex">
+                                    <div class="w-2/5 p-2">
+                                        <img class="w-20 h-full"
+                                            src="https://beecube.vn/wp-content/uploads/2023/12/sp_x2-max-gen-3.jpg" alt="">
+                                    </div>
+                                    <div class="py-2 px-2">
+                                        <h3 class="font-medium ">Máy chiếu mini - Beecube X2 Max Gen 3</h3>
+                                        <div class="flex mt-3 justify-between">
+                                            <p>1 × 2.990.000 ₫</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                            </svg>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
                             <hr class="my-4">
                             <p><strong>Tạm tính:</strong> 2.990.000 ₫</p>
                             <hr class="my-4">
@@ -97,7 +103,7 @@
                                     TOÁN</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </span>
                 <span class="relative z-10">
                     <i class="fa-regular fa-user header-icon check cursor-pointer" id="userIcon"></i>
@@ -131,7 +137,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Lấy ra các phần tử cần sử dụng
         var username = sessionStorage.getItem('username');
-
+        var UserID = sessionStorage.getItem('userID');
 
         const userIcon = document.getElementById('userIcon');
         const userDropdown = document.querySelector('.user-dropdown');
@@ -159,7 +165,7 @@
         });
     });
     </script>
-<script>
+<!-- <script>
     const cartIcon = document.getElementById('cartIcon');
     const cartDiv = document.getElementById('cartDiv');
     const closeCartIcon = document.getElementById('closeCart');
@@ -180,7 +186,7 @@
             }
         }
     });
-</script>
+</script> -->
 <script>
 
 
@@ -245,3 +251,4 @@ const firebaseConfig = {
 });
 
 </script>
+<!-- <script src="./config/showCartSmall.js"></script> -->

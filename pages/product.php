@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản Phẩm</title>
+   
 </head>
 <body>
     <section>
@@ -14,7 +15,7 @@
                     <a href="./index.php?action=infoProduct">
                         <img class="rounded-xl hover:scale-110 duration-500" src="./imgs/sp1.png" alt="" srcset="">
                     </a>
-                    <div class="absolute top-4 right-6 bg-white p-2 rounded-lg scale-0 group-hover:scale-100 z-20 transition-transform duration-500">
+                    <div class="absolute top-4 right-6 bg-white p-2 rounded-lg scale-0 group-hover:scale-100 z-20 transition-transform duration-500 hover:cursor-pointer">
                     <i class="fa-solid fa-cart-plus"></i>
                     </div>
                 </div>
@@ -163,6 +164,7 @@
     </section>
     
     <script src="./config/Productlist.js"></script>
+    <script src="./config/addCart.js"></script>
 
 </body>
 </html>

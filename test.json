@@ -1,129 +1,132 @@
 {
-    "Users":[
-        {
-            "UserID": 1,
-            "Username": "huy",
-            "Password": "123",
-            "Email": "huy@gmail.com",
-            "FullName": "Nguyen Quang Huy",
-            "PhoneNumber": "097534243",
-            "Address": "Cuong gian - nghi xuan - ha tinh"
-          },
-        {
-            "UserID": 2,
-            "Username": "quan",
-            "Password": "123",
-            "Email": "quan@gmail.com",
-            "FullName": "Nguyen Quang Quan",
-            "PhoneNumber": "0943534243",
-            "Address": "Xuan thanh - nghi xuan - ha tinh"
-        },
-        {
-            "UserID": 3,
-            "Username": "duong",
-            "Password": "123",
-            "Email": "duong@gmail.com",
-            "FullName": "Nguyen duong ",
-            "PhoneNumber": "09487334243",
-            "Address": "Cam le - nghi xuan - ha tinh"
-        }
-    ],
     "Admins": [
       {
-        "AdminID": 1,
-        "Username": "quoc",
+        "Email": "quoc@gmail.com",
         "Password": "123",
-        "Email": "quoc@gmail.com"
+        "UserID": 6,
+        "Username": "huy"
       },
       {
-        "AdminID": 2,
-        "Username": "khanh",
+        "Email": "khanh@gmail.com",
         "Password": "123",
-        "Email": "khanh@gmail.com"
+        "UserID": 7,
+        "Username": "khanh"
       },
       {
-        "AdminID": 3,
-        "Username": "tam",
+        "Email": "tam@gmail.com",
         "Password": "123",
-        "Email": "tam@gmail.com"
+        "UserID": 8,
+        "Username": "tam"
+      }
+    ],
+    "Invoices": [
+      {
+        "Condition": 1,
+        "InvoiceDate": "2024-01-30",
+        "InvoiceID": 1,
+        "OrderID": 1,
+        "TotalAmount": "1900000.00",
+        "UserID": 1
+      }
+    ],
+    "News": [
+      {
+        "Author": 1,
+        "Content": 1,
+        "NewsID": 1,
+        "PublishDate": 1,
+        "Title": 1
+      }
+    ],
+    "OrderDetails": [
+      {
+        "OrderDetailID": 1,
+        "OrderID": 1,
+        "ProductID": 2,
+        "Quantity": 1,
+        "Subtotal": "1900000.00",
+        "UserID": 1
+      },
+      {
+        "OrderDetailID": 2,
+        "OrderID": 2,
+        "ProductID": 2,
+        "Quantity": 1,
+        "Subtotal": "1900000.00",
+        "UserID": 2
+      }
+    ],
+    "Orders": [
+      {
+        "OrderDate": "2024-01-09",
+        "OrderID": 1,
+        "UserID": 1
+      },
+      {
+        "OrderDate": "2024-01-02",
+        "OrderID": 2,
+        "UserID": 4
       }
     ],
     "Products": [
-        {
-            "ProductID": 1,
-            "Name": "San phẩm 1",
-            "ImageURL": "1111",
-            "Description": "sản phẩm này là ...",
-            "Price": "100000.00",
-            "StockQuantity": "2",
-            "CategoryID": 0
-        },
-        {
-            "ProductID": 2,
-            "Name": "San phẩm 2",
-            "ImageURL": "1111",
-            "Description": "sản phẩm này là ...",
-            "Price": "5320000.00",
-            "StockQuantity": "2",
-            "CategoryID": 0
-
-        },
-        {
-            "ProductID": 3,
-            "Name": "San phẩm 3",
-            "ImageURL": "1111",
-            "Description": "sản phẩm này là ...",
-            "Price": "1340000.00",
-            "StockQuantity": "2",
-            "CategoryID": 1
-
-        }
+      {
+        "Description": "sản phẩm này là ...",
+        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
+        "Name": "San phẩm 1",
+        "Price": 100000.00,
+        "ProductID": 1,
+        "StockQuantity": "2"
+      },
+      {
+        "Description": "sản phẩm này là ...",
+        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
+        "Name": "San phẩm 2",
+        "Price": 5320000,
+        "ProductID": 2,
+        "StockQuantity": "2"
+      },
+      {
+        "Description": "sản phẩm này là ...",
+        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
+        "Name": "Máy Chiếu Mini – Beecube X1 Gen 2",
+        "Price": 1340000.00,
+        "ProductID": 3,
+        "StockQuantity": "2"
+      }
     ],
-    "Orders": [
-        {
-            "OrderID": 1,
-            "UserID": 1,
-            "OrderDate": "2024-01-09"
-
-        },
-        {
-            "OrderID": 2,
-            "UserID": 4,
-            "OrderDate": "2024-01-02"
-
-        }
-    ],
-    "OrderDetails": [
-        {
-            "OrderDetailID": 1,
-            "OrderID": 1,
-            "ProductID": 1,
-            "Quantity": 1,
-            "Subtotal": "1900000.00"
-
-        }
-    ],
-    "News": [
-        {
-            "NewsID": 1,
-            "Title": 1,
-            "Content": 1,
-            "PublishDate": 1,
-            "Author": 1
-
-        }
-    ],
-    "Invoices": [
-        {
-            "InvoiceID": 1,
-            "OrderID": 1,
-            "UserID": 1,
-            "InvoiceDate": "2024-01-30",
-            "TotalAmount": "1900000.00",
-            "Condition": 0
-
-        }
+    "Users": [
+       {
+        "Address": "Cuong gian - nghi xuan - ha tinh",
+        "Email": "huy@gmail.com",
+        "FullName": "Nguyen Quang Huy",
+        "Password": "123",
+        "PhoneNumber": "097534243",
+        "UserID": 1,
+        "Username": "huy1"
+      },
+       {
+        "Address": "Xuan thanh - nghi xuan - ha tinh",
+        "Email": "quan@gmail.com",
+        "FullName": "Nguyen Quang Quan",
+        "Password": "123",
+        "PhoneNumber": "0943534243",
+        "UserID": 2,
+        "Username": "quan"
+      },
+       {
+        "Address": "Cam le - nghi xuan - ha tinh",
+        "Email": "duong@gmail.com",
+        "FullName": "Nguyen duong ",
+        "Password": "123",
+        "PhoneNumber": "09487334243",
+        "UserID": 3,
+        "Username": "duong"
+      },
+      {
+        "Email": "quoc@gmail.com",
+        "Password": "quoc123",
+        "UserID": "PD24538",
+        "Username": "quoc"
+      }
     ]
-  
   }
-  

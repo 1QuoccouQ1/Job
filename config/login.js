@@ -30,6 +30,7 @@ const firebaseConfig = {
             if (user.Username === username && user.Password === password) {
                 userFound = true;
                 sessionStorage.setItem('username', username);
+                sessionStorage.setItem('userID', user.UserID);
                 window.location.href = "../index.php";
                 return;
             }
@@ -46,6 +47,7 @@ const firebaseConfig = {
                     if (admin.Username === username && admin.Password === password) {
                         adminFound = true;
                         sessionStorage.setItem('username', username);
+                        sessionStorage.setItem('userID', admin.UserID);
                         window.location.href = "../index.php";
                         return;
                     }

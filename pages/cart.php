@@ -22,8 +22,8 @@
                                 <th class="text-center">Tạm tính</th>
                             </tr>
                         </thead>
-                        <tbody >
-                                <tr class="">
+                        <tbody id="cartItemsContainer" >
+                                <!-- <tr class="">
 
                                 <td class="w-5">
                                     <a href="https://beecube.vn/gio-hang/?remove_item=a3f390d88e4c41f2747bfa2f1b5f87db&amp;_wpnonce=f053db6279" class="" aria-label="Remove Máy Chiếu Mini - Beecube X1 Gen 2 from cart" data-product_id="68" data-product_sku="">×</a>						</td>
@@ -45,7 +45,7 @@
 
                                 <td class="text-center" data-title="Tạm tính">
                                     <span class=""><bdi>1.990.000&nbsp;<span class="">₫</span></bdi></span>						</td>
-                                </tr>
+                                </tr> -->
                         </tbody>
                     </table>
                     <hr class="my-6">
@@ -60,19 +60,23 @@
                 <p class="font-medium text-xl ">Tổng đơn hàng</p>
                 <div class="font-medium mt-10 mb-7 flex ">
                     <span class="text-left">Tạm tính</span>
-                    <span class="ml-auto">1.990.000d</span>
+                    <span id="totalPrice1" class="ml-auto">0d</span>
                 </div>
                 <p class="font-medium mb-2">Giao hàng</p>
                 <p class="mb-1 tracking-wide">Giao hàng miễn phí</p>
                 <p class="tracking-wide">Tùy chọn giao hàng sẽ được cập nhật trong quá trình thanh toán.</p>
                 <div class="flex font-medium my-4">
                     <span>Tổng</span>
-                    <span class="ml-auto">1.990.000d</span>
+                    <span id="totalPrice" class="ml-auto">0d</span>
                 </div>
                 <button class ="text-white font-medion text-lg py-2 px-auto bg-yellow-500 w-full">THANH TOÁN</button>
             </div>
         </div>
 
     </section>
+    
+    <script src="./config/showCart.js"></script>
+    
+  
 </body>
 </html>
