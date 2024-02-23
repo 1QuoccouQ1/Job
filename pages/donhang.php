@@ -21,8 +21,8 @@
                                 <th class="text-center">Trạng thái</th>
                             </tr>
                         </thead>
-                        <tbody >
-                                <tr class="">
+                        <tbody  id="invoicesTableBody">
+                                <!-- <tr class="">
 
                                 <td class="w-5">
                                    1			</td>
@@ -39,7 +39,7 @@
 
                                 <td class="text-center" data-title="Tạm tính">
                                     <span class=""><bdi>Pending&nbsp;<span class=""></span></bdi></span>						</td>
-                                </tr>
+                                </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -82,5 +82,7 @@
             </div>
         </div>
     </section>
+    <script src="./config/ShowDonHang.js"></script>
+
 </body>
 </html>

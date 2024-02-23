@@ -65,32 +65,48 @@
       {
         "OrderDate": "2024-01-02",
         "OrderID": 2,
-        "UserID": 4
+        "UserID": 3
       }
     ],
     "Products": [
       {
         "Description": "sản phẩm này là ...",
-        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
-        "Name": "San phẩm 1",
-        "Price": 100000.00,
+        "ImageURL": "https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/429457844_1092409012073943_4815213519737483044_n.png?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=jhlhL-K9Gl8AX_vfLmZ&_nc_ht=scontent.fhan14-3.fna&oh=03_AdSMqNFnMJ6bcUeXhtH9oXuf7c-OBoeGMLQe2zPCrVq-yQ&oe=65FFF576",
+        "Name": "Máy chiếu mini – Beecube X2 Max Gen 4",
+        "Price": 3990000,
         "ProductID": 1,
         "StockQuantity": "2"
       },
       {
         "Description": "sản phẩm này là ...",
-        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
-        "Name": "San phẩm 2",
-        "Price": 5320000,
+        "ImageURL": "https://scontent.fhan14-1.fna.fbcdn.net/v/t1.15752-9/429118694_7903654646335306_1814048005763775915_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=g7vVwrGR8mgAX-XI2qO&_nc_ht=scontent.fhan14-1.fna&oh=03_AdSi2-K9PyFZKN2EBeerKcrQCsuErwG7sdRTLIm1drhnNQ&oe=660018E6",
+        "Name": "Máy chiếu mini – Beecube X2 Max Gen 3",
+        "Price": 2990000,
         "ProductID": 2,
         "StockQuantity": "2"
       },
       {
         "Description": "sản phẩm này là ...",
-        "ImageURL": "http://localhost:8080/BeeBee/imgs/sp5.png",
-        "Name": "Máy Chiếu Mini – Beecube X1 Gen 2",
-        "Price": 1340000.00,
+        "ImageURL": "https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/429326297_947723187080943_5317425336204500014_n.png?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=5Jnh2hLgVLQAX_r6dGE&_nc_ht=scontent.fhan14-2.fna&oh=03_AdRSKB3baZvWdG0DMQra3BlGk08jDdo-Z5L_FF5rITFnsA&oe=6600187A",
+        "Name": "Máy chiếu mini – Beecube Harmony",
+        "Price": 15990000,
         "ProductID": 3,
+        "StockQuantity": "2"
+      },
+      {
+        "Description": "sản phẩm này là ...",
+        "ImageURL": "https://scontent.fhan14-4.fna.fbcdn.net/v/t1.15752-9/429470048_1621389991731049_1394631633074882090_n.png?_nc_cat=102&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=wl3-bX6OxnMAX9nop0o&_nc_ht=scontent.fhan14-4.fna&oh=03_AdTPiJjj4tjUQ_itl9lJIy3HMlMJvF_xwlIYhjXpwyLgTw&oe=66000872",
+        "Name": "Máy chiếu mini – Beecube Xtreme II",
+        "Price": 6990000,
+        "ProductID": 4,
+        "StockQuantity": "2"
+      },
+      {
+        "Description": "sản phẩm này là ...",
+        "ImageURL": "https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/429384651_368072612800344_6022034195164166489_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=2aPR47G8xGQAX_of_Nw&_nc_ht=scontent.fhan14-2.fna&oh=03_AdQWkOxvVh0JCELB5iht93UthP7R8B4l9Kq_X1ETDjbOdw&oe=65FFFE6A",
+        "Name": "Máy Chiếu Mini – Beecube X1 Gen 2",
+        "Price": 1990000,
+        "ProductID": 5,
         "StockQuantity": "2"
       }
     ],
@@ -121,12 +137,6 @@
         "PhoneNumber": "09487334243",
         "UserID": 3,
         "Username": "duong"
-      },
-      {
-        "Email": "quoc@gmail.com",
-        "Password": "quoc123",
-        "UserID": "PD24538",
-        "Username": "quoc"
       }
     ]
   }

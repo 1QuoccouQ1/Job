@@ -10,7 +10,7 @@
     <section>
         <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Máy chiếu mini</h1>
         <div id="productsContainer" class="flex flex-wrap">
-            <div class="w-1/4 px-3 rounded-xl relative group ">
+            <!-- <div class="w-1/4 px-3 rounded-xl relative group ">
                 <div class="overflow-hidden">
                     <a href="./index.php?action=infoProduct">
                         <img class="rounded-xl hover:scale-110 duration-500" src="./imgs/sp1.png" alt="" srcset="">
@@ -79,7 +79,7 @@
                     <p class="mb-2">Máy Chiếu Mini – Beecube X1 Gen 2</p>
                     <p class="text-yellow-500 ">1.990.000 đ</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         
 

@@ -57,7 +57,7 @@
             <div class="header-button" id="userDropdown">
 
                 <span class="relative z-20">
-                <a class="hover:text-white" href="./index.php?action=cart">
+                <a class="hover:text-yellow-500" href="./index.php?action=cart">
                     <i class="fa-solid fa-cart-shopping header-icon cursor-pointer" id="cartIcon"></i>
                 </a>
                        

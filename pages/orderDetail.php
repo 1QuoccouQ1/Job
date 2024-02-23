@@ -21,8 +21,8 @@
                                 <th class="text-center">Tổng giá</th>
                             </tr>
                         </thead>
-                        <tbody >
-                                <tr class="">
+                        <tbody  id="orderDetailsTableBody">
+                                <!-- <tr class="">
 
                                 <td class="w-5">
                                    1			</td>
@@ -39,7 +39,7 @@
 
                                 <td class="text-center" data-title="Tạm tính">
                                     <span class=""><bdi>1.990.000đ&nbsp;<span class=""></span></bdi></span>						</td>
-                                </tr>
+                                </tr> -->
                         </tbody>
                     </table>
                     <hr class="my-6">
@@ -84,5 +84,7 @@
             </div>
         </div>
     </section>
+    <script src="./config/OrderDetails.js"></script>
+   
 </body>
 </html>
