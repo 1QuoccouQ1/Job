@@ -8,7 +8,7 @@
 <body>
     <section>
         <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Máy chiếu mini</h1>
-        <div class="flex flex-wrap">
+        <div id="productsContainer" class="flex flex-wrap">
             <div class="w-1/4 px-3 rounded-xl relative group ">
                 <div class="overflow-hidden">
                     <a href="./index.php?action=infoProduct">
@@ -142,14 +142,6 @@
                     <p class="text-yellow-500 ">1.990.000 đ</p>
                 </div>
             </div>
-           
-        </div>
-        
-
-    </section>
-    <section>
-        <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Loa Bluetooth</h1>
-        <div class="flex flex-wrap">
             <div class="w-1/4 px-3 rounded-xl relative group ">
                 <div class="bg-gray-200 rounded-xl">
                     <a href="http://">
@@ -164,11 +156,13 @@
                     <p class="text-yellow-500 ">1.200.000 đ</p>
                 </div>
             </div>
-            
            
         </div>
         
 
     </section>
+    
+    <script src="./config/Productlist.js"></script>
+
 </body>
 </html>

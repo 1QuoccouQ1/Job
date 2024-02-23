@@ -28,6 +28,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="./config/ConfigFirebase.js"></script>
 </head>
 
 <body class="common-home">
@@ -98,18 +101,20 @@
                 </span>
                 <span class="relative z-10">
                     <i class="fa-regular fa-user header-icon check cursor-pointer" id="userIcon"></i>
-                    <div class="absolute right-0 w-max text-md top-8 hidden user-dropdown ">
+                    <div class="absolute right-0 w-max text-md top-8  user-dropdown hidden">
                         <ul
                             class="bg-white border-2 border-slate-100 shadow text-center relative before:content-[' '] before:border-solid before:border-8 before:absolute before:bottom-full before:right-2 before:border-x-transparent before:border-t-transparent ">
                             <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"><a
                                     class="hover:text-white" href="./index.php?action=infomation">Hồ sơ</a></li>
                             <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"><a
                                     class="hover:text-white" href="./index.php?action=donhang">Đơn hàng</a></li>
-                            <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"><a
+                            <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer " id="admin"><a
+                                    class="hover:text-white " href="./admin/index.html">Admin</a></li>
+                            <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"  id="logoutButton"><a
                                     class="hover:text-white" href="#">Thoát</a></li>
                         </ul>
-                    <!-- </div>
-                    <div class="absolute right-0 w-max text-md top-8 hidden login-dropdown user-dropdown">
+                     </div>
+                    <div class="absolute right-0 w-max text-md top-8  login-dropdown hidden ">
                         <ul
                             class="bg-white border-2 border-slate-100 shadow text-center relative before:content-[' '] before:border-solid before:border-8 before:absolute before:bottom-full before:right-2 before:border-x-transparent before:border-t-transparent ">
                             <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"><a
@@ -117,7 +122,7 @@
                             <li class="px-4 py-2 hover:bg-yellow-400 hover:text-white duration-500 cursor-pointer"><a
                                     class="hover:text-white" href="./layouts/resgister.php">Đăng ký</a></li>
                         </ul>
-                    </div> -->
+                    </div> 
                 </span>
             </div>
         </div>
@@ -125,16 +130,23 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Lấy ra các phần tử cần sử dụng
+        var username = sessionStorage.getItem('username');
+
+
         const userIcon = document.getElementById('userIcon');
         const userDropdown = document.querySelector('.user-dropdown');
         const loginDropdown = document.querySelector('.login-dropdown');
 
         // Xử lý sự kiện click vào icon "user"
         userIcon.addEventListener('click', function() {
-            // Ẩn tất cả các dropdown khác
-            // loginDropdown.classList.add('hidden');
-            // Hiển thị hoặc ẩn dropdown của user tùy vào trạng thái hiện tại
-            userDropdown.classList.toggle('hidden');
+            
+            if (username && username !== '') {
+             
+                userDropdown.classList.toggle('hidden');
+            } else {
+               
+                loginDropdown.classList.toggle('hidden');
+            }
         });
 
         // Xử lý sự kiện khi mất focus ra khỏi div
@@ -168,4 +180,68 @@
             }
         }
     });
+</script>
+<script>
+
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDwB2bPtHlh-46hyBBdKYkHd2LRRS3rqBM",
+    authDomain: "fir-ce708.firebaseapp.com",
+    databaseURL: "https://fir-ce708-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "fir-ce708",
+    storageBucket: "fir-ce708.appspot.com",
+    messagingSenderId: "401824984167",
+    appId: "1:401824984167:web:a2a459519cf9e65cc6b8c2",
+    measurementId: "G-0Z8KFQFJCX"
+  };
+
+  // Initialize Firebases
+  firebase.initializeApp(firebaseConfig);
+
+  const database = firebase.database();
+
+   document.addEventListener('DOMContentLoaded', function() {
+    // Lấy giá trị username từ sessionStorage
+    var username = sessionStorage.getItem('username');
+
+    // Kiểm tra xem username có tồn tại và không rỗng
+    if (username && username !== '') {
+        // Truy vấn cơ sở dữ liệu Firebase để kiểm tra xem username có tồn tại trong bảng Admin không
+        firebase.database().ref('Admins').orderByChild('Username').equalTo(username).once('value', function(snapshot) {
+            if (snapshot.exists()) {
+                // console.log("0"); // Username thuộc bảng Admin
+            } else {
+                // Truy vấn cơ sở dữ liệu Firebase để kiểm tra xem username có tồn tại trong bảng Users không
+                firebase.database().ref('Users').orderByChild('Username').equalTo(username).once('value', function(snapshot) {
+                    if (snapshot.exists()) {
+                        const admin = document.getElementById('admin');
+                        admin.classList.add('hidden');
+
+                    } else {
+                        console.log("Username không tồn tại trong cơ sở dữ liệu");
+                    }
+                });
+            }
+        });
+    } else {
+        // console.log("Username không tồn tại hoặc rỗng");
+    }
+});
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const logoutButton = document.getElementById('logoutButton');
+
+    logoutButton.addEventListener('click', function() {
+        // Xoá giá trị của username từ sessionStorage
+        sessionStorage.removeItem('username');
+        // Sau khi xoá, chuyển hướng hoặc thực hiện các thao tác khác
+        // Ví dụ: Chuyển hướng đến trang đăng nhập
+        window.location.href = "./layouts/login.php";
+    });
+});
+
 </script>
