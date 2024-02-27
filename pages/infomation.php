@@ -30,7 +30,7 @@
                     <input type="text" id="phone" class="mt-1 p-2 w-full border rounded-md">
                 </div>
 
-                <div class="mb-4">
+                <!-- <div class="mb-4">
                     <label for="province" class="block text-sm font-medium text-gray-600">Tỉnh :</label>
                     <input type="text" id="province" class="mt-1 p-2 w-full border rounded-md">
                 </div>
@@ -43,7 +43,7 @@
                 <div class="mb-4">
                     <label for="ward" class="block text-sm font-medium text-gray-600">Xã :</label>
                     <input type="text" id="ward" class="mt-1 p-2 w-full border rounded-md">
-                </div>
+                </div> -->
 
                 <div class="mb-4 col-span-2">
                     <label for="address" class="block text-sm font-medium text-gray-600">Địa chỉ :</label>

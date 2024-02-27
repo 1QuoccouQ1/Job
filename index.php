@@ -59,6 +59,12 @@ include "./config/connect.php";
         case 'orderDetail':
             include './pages/orderDetail.php';
             break;
+        case 'myOrder':
+            include './pages/myOrder.php';
+            break;
+        case 'Payments':
+            include './pages/Payments.php';
+            break;
         default:
             include './pages/home.php';
             break;
