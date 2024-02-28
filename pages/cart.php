@@ -69,7 +69,7 @@
                     <span>Tổng</span>
                     <span id="totalPrice" class="ml-auto">0d</span>
                 </div>
-                <button class ="text-white font-medion text-lg py-2 px-auto bg-yellow-500 w-full">THANH TOÁN</button>
+                <button class ="text-white font-medion text-lg py-2 px-auto bg-yellow-500 w-full"><a class="hover:text-white" href="./index.php?action=Payments">THANH TOÁN</a></button>
             </div>
         </div>
 

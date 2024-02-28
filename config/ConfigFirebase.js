@@ -22,17 +22,6 @@
 
   const database = firebase.database();
 
-  export default database;
+  // export default database;
 
-  // Lấy dữ liệu từ Firebase Realtime Database
-function getDataOnce() {
-    database.ref('Admins').once('value', (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      // Thực hiện xử lý dữ liệu ở đây
-    });
-  }
-  
-  // Gọi hàm để lấy dữ liệu một lần
-  getDataOnce();
   

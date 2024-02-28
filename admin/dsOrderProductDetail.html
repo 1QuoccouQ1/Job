@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/c13a07f3cd.js" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* css chung */
         * {
@@ -365,35 +366,15 @@
     </div>
     <div id="main-content">
         <!-- có thể thay đổi nội dung -->
-        <a onclick="OpenFormCreateUser()" href='#' class='return'><i class='fa-solid fa-square-plus'></i>&nbspThêm Sản Phẩm</a>
-        <form form method="post" action="">
-            <div class="logo"><img src="../images/Logohanquoc.png" alt=""></div>
-            <h1 class="header">Thêm Món</h1>
-            <input type="text" id="productID" name="productID" required placeholder="Mã sản phẩm">
-            <input type="text" id="name" name="name" required placeholder="Tên sản phẩm">
-            <input type="text" id="price" name="price" required placeholder="Giá tiền">
-            <br>
-            <input type="text" id="quantity" name="quantity" required placeholder="Số Lượng">
-            <br>
-            <input type="text" id="url" name="url" required placeholder="URL Ảnh (3X4)">
-            <input type="text" id="Description" name="Description" required placeholder="Description ...">
-            <br>
-            <input type="submit" value="Tạo">
-            <br>
-            <h4 style="color: red;"></h4>
-        </form>
-        <h1 style="width: 100%;text-align: center;padding-top: 30px;">Danh Sách Sản Phẩm</h1>
+        
+        <h1 style="width: 100%;text-align: center;padding-top: 30px;">Chi tiết đơn hàng</h1>
         <table id="product-table-body">
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th>Mã sản phẩm</th>
-                    <th>Hình Ảnh</th>
                     <th>Tên sản phẩm </th>
                     <th>Số lượng </th>
                     <th>Giá Tiền</th>
-                    <th>Chỉnh sửa</th>
-                    <th>Xoá sản phẩm</th>
                 </tr>
             </thead>
             <tbody>
@@ -427,7 +408,7 @@
             }
         }
     </script>
-     <script src="../config/listProduct.js"></script>
+     <script src="../config/dsOrderProductDetail.js"></script>
 </body>
 
 </html>

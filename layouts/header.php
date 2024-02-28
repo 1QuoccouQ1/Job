@@ -31,6 +31,87 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="./config/ConfigFirebase.js"></script>
+    <style>
+
+        #toast {
+            position: fixed;
+            top: 10px;
+            right: 5px;
+            z-index: 999;
+        }
+
+        .toastt {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 2px;
+            padding: 5px 0;
+            min-width: 400px;
+            max-width: 450px;
+            border-left: 4px solid #47d864;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+            transition: all linear 0.5s;
+            margin-bottom: 10px;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+            opacity: 0;
+            transform: translateX(calc(100% + 32px));
+            }
+            to {
+            opacity: 1;
+            transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeOut {
+            to {
+            opacity: 0;
+            }
+        }
+        .toast__icon {
+            font-size: 20px;
+
+
+        }
+
+        .toast--success {
+            border-color: #47d864;
+        }
+        
+        .toast--success .toast__icon {
+            color: #47d864;
+        }
+        
+        .toast--info {
+            border-color: #2f86eb;
+        }
+        
+        .toast--info .toast__icon {
+            color: #2f86eb;
+        }
+        
+        .toast__icon,
+        .toast__close {
+            padding: 0 16px;
+        }
+        .toast__body {
+            flex-grow: 1;
+        }
+        .toast__msg {
+            font-size: 14px;
+            color: #888;
+            margin: 10px;
+            line-height: 1.5;
+        }
+
+        .toast__close {
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body class="common-home">
@@ -133,6 +214,8 @@
             </div>
         </div>
     </header>
+<div id="toast"></div>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Lấy ra các phần tử cần sử dụng
@@ -244,6 +327,7 @@ const firebaseConfig = {
     logoutButton.addEventListener('click', function() {
         // Xoá giá trị của username từ sessionStorage
         sessionStorage.removeItem('username');
+        sessionStorage.removeItem('userID');
         // Sau khi xoá, chuyển hướng hoặc thực hiện các thao tác khác
         // Ví dụ: Chuyển hướng đến trang đăng nhập
         window.location.href = "./layouts/login.php";
@@ -252,3 +336,65 @@ const firebaseConfig = {
 
 </script>
 <!-- <script src="./config/showCartSmall.js"></script> -->
+<script>
+    
+      function addToCartAndShowToast(key) {
+  addToCart(key);
+  showToast();
+}
+
+function showToast() {
+  toast({
+    message: "Đã thêm giỏ hàng thành công.",
+    type: "success",
+    duration: 3000
+  });
+}
+        // Icon message 
+
+
+
+        function toast({  message = "", type = "info", duration = 3000 }) {
+            const main = document.getElementById("toast");
+            if (main) {
+            const toast = document.createElement("div");
+        
+            // Auto remove toast
+            const autoRemoveId = setTimeout(function () {
+                main.removeChild(toast);
+            }, duration + 1000);
+        
+            // Remove toast when clicked
+            toast.onclick = function (e) {
+                if (e.target.closest(".toast__close")) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+                }
+            };
+        
+            const icons = {
+                success: "fa-solid fa-cart-shopping",
+                info: "fas fa-info-circle"
+
+            };
+            const icon = icons[type];
+            const delay = (duration / 1000).toFixed(2);
+        
+            toast.classList.add("toastt", `toast--${type}`);
+            toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+        
+            toast.innerHTML = `
+                            <div class="toast__icon">
+                                <i class="${icon}"></i>
+                            </div>
+                            <div class="toast__body">
+                                <p class="toast__msg">${message}</p>
+                            </div>
+                            <div class="toast__close">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        `;
+            main.appendChild(toast);
+            }
+        }
+</script>

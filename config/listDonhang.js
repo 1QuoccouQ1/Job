@@ -25,6 +25,7 @@ const firebaseConfig = {
     const invoices = snapshot.val();
     const orderTable = document.getElementById('order-body');
 
+    let stt = 0;
     for (let key in invoices) {
         const invoice = invoices[key];
         const orderId = invoice.OrderID;
@@ -41,14 +42,19 @@ const firebaseConfig = {
                 const user = userSnapshot.val();
 
                 // Tạo một hàng mới trong bảng
+                const productIDJSON = JSON.stringify(invoice.ProductID);
+                const encodedProductID = encodeURIComponent(productIDJSON);
+
+                console.log(encodedProductID)
+
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${key}</td>
+                    <td>${stt++}</td>
                     <td>${invoice.InvoiceID}</td>
-                    <td>${user.FullName}</td>
-                    <td>${user.Address}</td>
-                    <td>${order.OrderID}</td>
-                    <td>${order.OrderID}</td>
+                    <td>${invoice.FullName}</td>
+                    <td>${invoice.Address}</td>
+                    <td>Xem chi tiết</td>
                     <td>${invoice.TotalAmount}</td>
                     <td>
                         <select name='trangThai[]' class='trangThaiSelect'>

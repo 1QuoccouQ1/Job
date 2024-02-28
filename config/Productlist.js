@@ -13,7 +13,7 @@ productsRef.once("value", function(snapshot) {
                         <a href="./index.php?action=infoProduct" >
                             <img class="rounded-xl hover:scale-110 duration-500" src="${item.ImageURL}" alt="" srcset="">
                         </a>
-                        <div class="add-to-cart-btn absolute top-4 right-6 bg-white p-2 rounded-lg scale-0 group-hover:scale-100 z-20 transition-transform duration-500 hover:cursor-pointer" onclick="addToCart('${key}')">
+                        <div class="add-to-cart-btn absolute top-4 right-6 bg-white p-2 rounded-lg scale-0 group-hover:scale-100 z-20 transition-transform duration-500 hover:cursor-pointer" onclick="addToCartAndShowToast('${key}')">
                             <i class="fa-solid fa-cart-plus"></i>
                         </div>
                     </div>

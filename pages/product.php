@@ -8,7 +8,7 @@
 </head>
 <body>
     <section>
-        <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Máy chiếu mini</h1>
+        <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Sản phẩm</h1>
         <div id="productsContainer" class="flex flex-wrap">
             <!-- <div class="w-1/4 px-3 rounded-xl relative group ">
                 <div class="overflow-hidden">
@@ -84,7 +84,7 @@
         
 
     </section>
-    <section>
+    <!-- <section>
         <h1 class="text-3xl font-medium mt-20 mb-12 pl-4">Phụ kiện máy chiếu</h1>
         <div class="flex flex-wrap">
             <div class="w-1/4 px-3 rounded-xl relative group ">
@@ -161,7 +161,7 @@
         </div>
         
 
-    </section>
+    </section> -->
     
     <script src="./config/Productlist.js"></script>
     <script src="./config/addCart.js"></script>
